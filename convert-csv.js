@@ -6,7 +6,10 @@ const readData = (dataFile, cb) => {
   fs.createReadStream(dataFile)
     .on("error", (err) => console.log("Error:", err.message))
     .pipe(csv())
-    .on("data", (csvData) => results.push(csvData))
+    .on("data", (csvData) => {
+      csvData.first_resolved_at = csvData.first_resolved_at.split("UTC").join("UT")
+      results.push(csvData);
+    })
     .on("end", () => {
       cb(results);
     });
