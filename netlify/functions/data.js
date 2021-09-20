@@ -7,7 +7,7 @@ exports.handler = async function(event) {
   if (items.length > 0) {
     return {
       statusCode: 200,
-      body: JSON.stringify(item[0]),
+      body: JSON.stringify(items[0]),
     };
   } else {
     return {
