@@ -1,4 +1,4 @@
-const results = require("./results");
+const { results } = require("./results");
 
 exports.handler = async function(event) {
 
