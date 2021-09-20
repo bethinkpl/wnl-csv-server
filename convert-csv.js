@@ -7,7 +7,7 @@ const readData = (dataFile, cb) => {
     .on("error", (err) => console.log("Error:", err.message))
     .pipe(csv())
     .on("data", (csvData) => {
-      csvData.first_resolved_at = csvData.first_resolved_at.split("UTC").join("UT")
+      csvData.first_resolved_at = csvData.first_resolved_at.split(" UTC").join("");
       results.push(csvData);
     })
     .on("end", () => {
