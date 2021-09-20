@@ -1,0 +1,11 @@
+{
+  "name": "wnl-csv-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/bethinkpl/wnl-csv-server.git",
+  "author": "Jakub Wojtczak <jjwojtczak@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "csv-parser": "^3.0.0"
+  }
+}
